@@ -7,9 +7,7 @@ import CartIcon from "./CartIcon";
 
 const links = [
   { id: 1, title: "Início", url: "/" },
-  { id: 2, title: "Menu", url: "/" },
-  { id: 3, title: "Horário de Funcionamento", url: "/" },
-  { id: 4, title: "Contato", url: "/" },
+  { id: 2, title: "Cardápio de Natal", url: "/natal" },
 ];
 
 export default function Menu() {

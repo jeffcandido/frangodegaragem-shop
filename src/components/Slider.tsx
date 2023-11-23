@@ -6,8 +6,8 @@ import React, { useEffect, useState } from "react";
 const data = [
   {
     id: 1,
-    title: "Cada detalhe pensado para alegrar seu paladar",
-    image: "/slide1.png",
+    title: "Cada detalhe pensado para alegrar o seu paladar",
+    image: "/data/carnes/p9.png",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const data = [
   {
     id: 3,
     title: "Feito com amor, da nossa família para a sua",
-    image: "/slide3.png",
+    image: "/data/assados/assado.jpeg",
   },
 ];
 
@@ -47,10 +47,10 @@ export default function Slider() {
         </button>
       </div>
       {/* IMAGE CONTAINER */}
-      <div className="w-full flex-1 relative">
+      <div className="w-full flex-1 relative p-4">
         <Image
           src={data[currentSlide].image}
-          alt=""
+          alt={data[currentSlide].title}
           fill
           priority={true}
           className="object-cover"
