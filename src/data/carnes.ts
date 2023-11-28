@@ -1,4 +1,6 @@
-export const carnes: Products = [
+import { ProductType } from "@/types/types";
+
+export const carnes: ProductType[] = [
   {
     id: 1,
     title: "LOMBO COM GELÉIA DE ABACAXI",

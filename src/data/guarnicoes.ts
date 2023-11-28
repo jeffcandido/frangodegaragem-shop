@@ -1,4 +1,6 @@
-export const guarnicoes: Products = [
+import { ProductType } from "@/types/types";
+
+export const guarnicoes: ProductType[] = [
   {
     id: 1,
     title: "Farofa",

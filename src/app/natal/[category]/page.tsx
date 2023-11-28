@@ -23,13 +23,13 @@ export default function CategoryPage(props: any) {
           {/* IMAGE CONTAINER */}
           {item.img && (
             <div className="relative h-[80%]">
-              <Image src={item.img} alt="" fill className="object-contain" />
+              <Image src={item.img} alt="" priority={true} fill className="object-contain" />
             </div>
           )}
           {/* TEXT CONTAINER */}
           <div className="flex items-center justify-between font-bold">
             <h1 className="text-2xl uppercase p-2">{item.title}</h1>
-            <h2 className="group-hover:hidden text-xl">${item.price}</h2>
+            <h2 className="group-hover:hidden text-xl">R$ {item.price}</h2>
             <button className="hidden group-hover:block uppercase bg-red-500 text-white p-2 rounded-md">
               Adicionar ao Carrinho
             </button>

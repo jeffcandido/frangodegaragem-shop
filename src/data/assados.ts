@@ -1,4 +1,6 @@
-export const assados: Products = [
+import { ProductType } from "@/types/types";
+
+export const assados: ProductType[] = [
   {
     id: 1,
     title: "Pernil",

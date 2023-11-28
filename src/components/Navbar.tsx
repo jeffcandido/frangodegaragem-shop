@@ -23,11 +23,11 @@ export default function Navbar() {
       {/* { RIGHT LINKS } */}
       <div className="hidden md:flex gap-4 items-center justify-content-end flex-1">
         <div className="md:absolute whitespace-nowrap top-3 r-2 lg:static flex items-center cursor-pointer bg-orange-300 px-6 rounded-md">
-          <Image src="/phone.png" alt="Telefone 1" width={20} height={20} />
+          <Image src="/phone.png" alt="Telefone 1" width={20} height={20} priority={true} />
           <span>(31) 3234-0338</span>
         </div>
         <div className="md:absolute whitespace-nowrap top-3 r-2 lg:static flex items-center gap-2 cursor-pointer bg-orange-300 px-6 rounded-md">
-          <Image src="/phone.png" alt="Telefone 3" width={20} height={20} />
+          <Image src="/phone.png" alt="Telefone 2" width={20} height={20} priority={true} />
           <span>(31) 99744-6636</span>
         </div>
 
