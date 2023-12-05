@@ -13,7 +13,7 @@ export default function CartPage() {
   const handleCheckout = async () => {
     try {
       const cart = products.map(
-        (item) => `${item.quantity} x (${item.optionTitle}) x ${item.title}`
+        (item) => `${item.quantity} ${item.optionTitle} - ${item.title}`
       );
       const cartMessage = [
         "Olá, gostaria de fazer o meu pedido de Natal 🌲🎅🏼:%0a",
@@ -21,7 +21,7 @@ export default function CartPage() {
       ].join("%0a");
 
       window.open(
-        `https://api.whatsapp.com/send?phone=5534999819129&text=${cartMessage}`,
+        `https://api.whatsapp.com/send?phone=5531997446636&text=${cartMessage}`,
         "_blank",
         "noopener"
       );
