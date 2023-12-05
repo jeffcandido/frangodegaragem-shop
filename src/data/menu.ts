@@ -10,6 +10,14 @@ type Menu = {
 export const menu: Menu = [
   {
     id: 1,
+    slug: "combos",
+    title: "Combos",
+    desc: "Descricao para Combos Assados no Bafo",
+    img: "/data/carnes/p3.jpg",
+    color: "white",
+  },
+  {
+    id: 2,
     slug: "carnes",
     title: "Carnes",
     desc: "Descricao para Carnes Assadas no Bafo",
@@ -17,7 +25,7 @@ export const menu: Menu = [
     color: "black",
   },
   {
-    id: 2,
+    id: 3,
     slug: "guarnicoes",
     title: "Guarnições",
     desc: "Descricao para Guarnições",
@@ -25,7 +33,7 @@ export const menu: Menu = [
     color: "white",
   },
   {
-    id: 3,
+    id: 4,
     slug: "assados",
     title: "Assados",
     desc: "Descricao para Assados",

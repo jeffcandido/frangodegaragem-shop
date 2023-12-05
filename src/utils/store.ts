@@ -18,14 +18,15 @@ export const useCartStore = create(
         const products = get().products;
         const productInState = products.find(
           (product) =>
-            product.id == item.id && product.optionTitle == item.optionTitle
+            `${product.id}-${product.optionTitle}` ==
+            `${item.id}-${item.optionTitle}`
         );
 
         if (!!productInState) {
           const updatedProducts = products.map((product) => {
             if (
-              product.id == productInState.id &&
-              product.optionTitle == productInState.optionTitle
+              `${product.id}-${product.optionTitle}` ==
+              `${productInState.id}-${productInState.optionTitle}`
             ) {
               return {
                 ...item,

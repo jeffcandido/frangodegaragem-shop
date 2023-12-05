@@ -1,12 +1,10 @@
 "use client";
 import { useCartStore } from "@/utils/store";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
 export default function CartPage() {
   const { products, totalItems, totalPrice, removeFromCart } = useCartStore();
-  const router = useRouter();
 
   useEffect(() => {
     useCartStore.persist.rehydrate();
@@ -14,7 +12,19 @@ export default function CartPage() {
 
   const handleCheckout = async () => {
     try {
-      console.log("TRY OUT CHECKOUT");
+      const cart = products.map(
+        (item) => `${item.quantity} x (${item.optionTitle}) x ${item.title}`
+      );
+      const cartMessage = [
+        "Olá, gostaria de fazer o meu pedido de Natal 🌲🎅🏼:%0a",
+        ...cart,
+      ].join("%0a");
+
+      window.open(
+        `https://api.whatsapp.com/send?phone=5534999819129&text=${cartMessage}`,
+        "_blank",
+        "noopener"
+      );
     } catch (err) {
       console.log(err);
     }
@@ -43,7 +53,9 @@ export default function CartPage() {
               <h1 className="uppercase text-xl font-bold">
                 {item.quantity} x - {item.title}
               </h1>
-              <span>{item.optionTitle} - R$ {item.price/item.quantity}</span>
+              <span>
+                {item.optionTitle} - R$ {item.price / item.quantity}
+              </span>
             </div>
             <h1 className="text-xl font-bold">R$ {item.price}</h1>
             <span
@@ -70,7 +82,7 @@ export default function CartPage() {
           className="bg-red-500 text-white p-3 rounded-md w-1/2 self-end"
           onClick={handleCheckout}
         >
-          CHECKOUT
+          Fazer meu pedido
         </button>
       </div>
     </div>

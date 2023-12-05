@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const data = [
@@ -43,9 +44,17 @@ export default function Slider() {
           {data[currentSlide].title}
         </h1>
         <button className="bg-red-500 text-white py-4 px-8 rounded-md">
-          Fazer meu pedido
+          <Link
+            href={
+              "https://api.whatsapp.com/send?phone=5531997446636&text=Olá, poderia me enviar o cardápio de Natal?🌲🎅🏼"
+            }
+            target="_blank"
+          >
+            Fazer meu pedido
+          </Link>
         </button>
       </div>
+
       {/* IMAGE CONTAINER */}
       <div className="w-full flex-1 relative p-4">
         <Image
