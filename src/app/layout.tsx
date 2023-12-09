@@ -37,7 +37,7 @@ export default function RootLayout({
           <Notification />
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <ToastContainer
             position="bottom-right"
             theme="dark"
