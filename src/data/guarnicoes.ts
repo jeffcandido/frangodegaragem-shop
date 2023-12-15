@@ -99,7 +99,7 @@ export const guarnicoes: ProductType[] = [
       },
       {
         title: "Marmitex G",
-        additionalPrice: 34,
+        additionalPrice: 8,
       },
     ],
   },
