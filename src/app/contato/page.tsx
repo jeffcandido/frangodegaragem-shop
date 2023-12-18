@@ -6,7 +6,7 @@ export default function ContactPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       window.location.replace(
-        `https://api.whatsapp.com/send?phone=5531997446636&text=Olá, gostaria de fazer o meu pedido de Natal 🌲🎅🏼:%0a`
+        `https://api.whatsapp.com/send?phone=5531997446636&text=Olá, gostaria de fazer o meu pedido de Natal 🌲🎅🏼`
       );
     }, 2000);
     return () => clearTimeout(timer);
